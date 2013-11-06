@@ -8,7 +8,9 @@ minimal dependcies for use in Android etc.
 
 
 Example usage
-```
+```java
 CmusClient clinet = new CmusClient("localhost", 8888, "password");
 client.issueCommand(Volume.UP);
 ```
+
+
