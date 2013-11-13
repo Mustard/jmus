@@ -2,8 +2,8 @@ package com.github.mustard.jmus;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * @author Daniel
@@ -12,7 +12,7 @@ public class CmusClientTest {
     
     private CmusClient client;
     
-    @BeforeTest
+    @Before
     public void setUp() {
         client = new CmusClient("localhost", 8888, "foobar");
     }
@@ -31,10 +31,5 @@ public class CmusClientTest {
     public void shouldCreatePassword() {
         assertThat(client.getPassword(), equalTo("foobar"));
     }
-    
-//    @Test
-//    public void shouldSendCommand() {
-//        assertThat(client.issueCommand(Volume.UP));
-//    }
     
 }

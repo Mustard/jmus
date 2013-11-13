@@ -1,6 +1,7 @@
 package com.github.mustard.jmus;
 
 import com.github.mustard.jmus.command.Command;
+import com.github.mustard.jmus.command.CommandWithResponse;
 import java.io.IOException;
 
 /**
@@ -33,6 +34,11 @@ public class CmusClient {
     public void issueCommand(Command command) throws IOException {
         CmusCommandDispatcher dispatcher = new CmusCommandDispatcher(this);
         dispatcher.dispatch(command);
+    }
+    
+    public CmusResponse issueCommand(CommandWithResponse commandWithResponse) {
+        CmusCommandDispatcher dispatcher = new CmusCommandDispatcher(this);
+        return dispatcher.dispatchForResponse(commandWithResponse);
     }
     
 }

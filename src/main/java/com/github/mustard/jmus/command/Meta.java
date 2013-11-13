@@ -3,21 +3,17 @@ package com.github.mustard.jmus.command;
 /**
  * @author Daniel
  */
-public enum Volume implements Command {
+public enum Meta implements CommandWithResponse {
 
-    UP("vol +10%"), 
-    DOWN("vol -10%")
+    STATUS("status")
     ;
-    
     private final String command;
     
-    private Volume(String command) {
+    private Meta(final String command) {
         this.command = command;
     }
 
-    @Override
     public String getCommand() {
         return command;
     }
-    
 }

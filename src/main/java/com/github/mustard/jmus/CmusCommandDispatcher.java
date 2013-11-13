@@ -1,6 +1,7 @@
 package com.github.mustard.jmus;
 
 import com.github.mustard.jmus.command.Command;
+import com.github.mustard.jmus.command.CommandWithResponse;
 import java.io.*;
 import java.net.Socket;
 
@@ -79,4 +80,9 @@ public class CmusCommandDispatcher {
             }
         }
     }
+    
+    CmusResponse dispatchForResponse(CommandWithResponse commandWithResponse) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

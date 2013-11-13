@@ -19,6 +19,7 @@ public enum Playback implements Command {
         this.command = command;
     }
 
+    @Override
     public String getCommand() {
         return command;
     }
