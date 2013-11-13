@@ -9,8 +9,12 @@ minimal dependcies for use in Android etc.
 
 Example usage
 ```java
-CmusClient clinet = new CmusClient("localhost", 8888, "password");
+CmusClient client = new  CmusClient("192.168.3.99", 9898, "foobar");
 client.issueCommand(Volume.UP);
+client.issueCommand(Volume.DOWN);
+client.issueCommand(Playback.PLAY);
+client.issueCommand(Playback.PAUSE);
+CmusResponse response = client.issueCommand(Meta.STATUS);
 ```
 
 
