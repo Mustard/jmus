@@ -4,9 +4,6 @@ import com.github.mustard.jmus.command.Command;
 import com.github.mustard.jmus.command.CommandWithResponse;
 import java.io.IOException;
 
-/**
- * @author Daniel
- */
 public class CmusClient {
     
     private final String host;
@@ -31,13 +28,13 @@ public class CmusClient {
         return password;
     }
     
-    public void issueCommand(Command command) throws IOException {
-        CmusCommandDispatcher dispatcher = new CmusCommandDispatcher(this);
+    public void command(Command command) throws IOException {
+        CommandDispatcher dispatcher = new CommandDispatcher(this);
         dispatcher.dispatch(command);
     }
     
-    public CmusResponse issueCommand(CommandWithResponse commandWithResponse) {
-        CmusCommandDispatcher dispatcher = new CmusCommandDispatcher(this);
+    public Response command(CommandWithResponse commandWithResponse) {
+        CommandDispatcher dispatcher = new CommandDispatcher(this);
         return dispatcher.dispatchForResponse(commandWithResponse);
     }
     

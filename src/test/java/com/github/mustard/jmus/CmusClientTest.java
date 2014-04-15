@@ -5,9 +5,6 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * @author Daniel
- */
 public class CmusClientTest {
     
     private CmusClient client;

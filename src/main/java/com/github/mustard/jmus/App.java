@@ -12,11 +12,11 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         CmusClient client = new  CmusClient("192.168.3.99", 9898, "foobar");
-        client.issueCommand(Volume.UP);
-        client.issueCommand(Volume.DOWN);
-        client.issueCommand(Playback.PLAY);
-        client.issueCommand(Playback.PAUSE);
+        client.command(Volume.UP);
+        client.command(Volume.DOWN);
+        client.command(Playback.PLAY);
+        client.command(Playback.PAUSE);
         // Get the current status, now playing etc
-        CmusResponse response = client.issueCommand(Meta.STATUS);
+        Response response = client.command(Meta.STATUS);
     }
 }

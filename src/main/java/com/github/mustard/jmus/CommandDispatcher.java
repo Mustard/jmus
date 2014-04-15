@@ -10,11 +10,11 @@ import java.net.Socket;
  * 
  * TODO unit / integration tests... 
  */
-public class CmusCommandDispatcher {
+public class CommandDispatcher {
 
     private final CmusClient client;
 
-    public CmusCommandDispatcher(CmusClient client) {
+    public CommandDispatcher(CmusClient client) {
         this.client = client;
     }
 
@@ -81,8 +81,8 @@ public class CmusCommandDispatcher {
         }
     }
     
-    CmusResponse dispatchForResponse(CommandWithResponse commandWithResponse) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    Response dispatchForResponse(CommandWithResponse commandWithResponse) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

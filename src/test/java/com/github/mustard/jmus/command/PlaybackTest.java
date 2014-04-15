@@ -1,13 +1,10 @@
-package com.github.mustard.jmus;
+package com.github.mustard.jmus.command;
 
-import com.github.mustard.jmus.command.Playback;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
-/**
- * @author Daniel
- */
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
+
 public class PlaybackTest {
     
     @Test

@@ -5,18 +5,18 @@ import java.util.Scanner;
 /**
  * @author Daniel
  */
-public class CmusResponse {
+public class Response {
     
     private String status;
     private String nowPlayingTitle;
     private String nowPlayingArtist;
     
-    public static CmusResponse parse(String rawResponse) {
+    public static Response parse(String rawResponse) {
         if (rawResponse == null) {
             return null;
         }
         Scanner scanner = new Scanner(rawResponse);
-        CmusResponse response = new CmusResponse();
+        Response response = new Response();
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             if (line.startsWith("status")) {
