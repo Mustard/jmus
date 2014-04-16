@@ -18,3 +18,4 @@ CmusResponse response = client.issueCommand(Meta.STATUS);
 ```
 
 
+[![Build Status](https://travis-ci.org/Mustard/jmus.svg?branch=master)](https://travis-ci.org/Mustard/jmus)
